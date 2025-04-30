@@ -1,0 +1,3 @@
+background:#210F37
+stopwatch background:#4F1C51
+buttons background:#A55B4B
