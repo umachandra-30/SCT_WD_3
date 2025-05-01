@@ -1,100 +1,54 @@
 body {
-    background-color: #210F37;
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
-}
-
-.main-cointainer {
-    background-color: #4F1C51;
-    height: 350px;
-    width: 650px;
+    background-color: #f4f7f8;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: auto; 
-    position: absolute;
-    top: 0; bottom: 0; left: 0; right: 0;
-    border-radius: 7%;
-    box-shadow: 0 0 10px 0 #F7AD45 inset, 0 0 10px 4px #F7AD45;
-}
-
-.digit {
-    font-size: 100px;
-    color: white; 
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
-#start, #stop, #lap, #reset {
-    border-color: #3498db;
-    color: #fff;
-    box-shadow: 0 0 40px 40px #D29F80 inset, 0 0 0 0 #D29F80;
-    transition: all 150ms ease-in-out;
-}
-
-#start:hover, #stop:hover, #lap:hover, #reset:hover {
-    box-shadow: 0 0 10px 0 #D29F80 inset, 0 0 10px 4px #D29F80;
-}
-
-.buttons {
+    margin: 40px 0;
+  }
+  h1 {
+    color: #333;
+  }
+  #game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px 0;
+  }
+  .cell {
+    background-color: white;
+    border: 2px solid #333;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
     display: flex;
     justify-content: center;
-    gap: 15px; 
-    margin-top: 30px; 
-}
-
-.btn {
-    background-color: #A55B4B;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 8px;
+    align-items: center;
     cursor: pointer;
-    width: 90px;
+    user-select: none;
+  }
+  .cell.winning-cell {
+    background-color: #90ee90;
+    border-color: #3a7d3a;
+  }
+  #status {
+    font-size: 1.25rem;
+    min-height: 1.5rem;
+    color: #333;
+  }
+  #reset {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #2e8bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #D2785A;
-}
-
-#laps {
-    font-family: monospace;
-    width: 350px;
-    height: 100px;
-    background-color: #D2785A;
-    display: block;
-    border-radius: 25%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    text-align: center;
-    box-sizing: border-box;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
-    box-shadow: 0 0 10px 0 #85193C inset, 0 0 10px 4px #85193C;
-}
-#laps::-webkit-scrollbar {
-    width: 6px;
-}
-
-#laps::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-#laps::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
-}
-
-::-webkit-scrollbar-corner
-{
-    display: none;
-    height: 0;
-    width: 0;
-}
-
-
-
+  }
+  #reset:hover {
+    background-color: #1a6de0;
+  }
+  
